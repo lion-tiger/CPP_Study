@@ -33,9 +33,89 @@ java class path
 2 go
 3 jython
 
+
+export JYTHON_HOME=/Users/tengyue/jython2.7.0
+export JYTHONPATH=$JYTHON_HOME/lib
+export PATH=$JAVA_HOME/bin:$$JAVA_HOME:$JYTHONPATH:$PATH
+
+
+export JYTHON_HOME=/Users/Siro/jython2.7b1
+export JYTHONPATH=$JYTHON_HOME/Lib
+
+# Path
+export PATH=$JAVA_HOME/bin:$JYTHON_HOME:$PATH
+
+
+
+
+
 17.3 编写c语言扩展
 
 扩展Python通常指扩展CPython 用c语言实现标准python版本
 提示！！
 
 c语言的动态性不及java 和 c#    .net
+
+编写python的c语言时必须严格遵照API  有几个项目的目的是简化编写c语言的扩展过程
+
+SWIG  简单包装和接口生成器
+其他的动态语言 javascript
+导入已经存在的 共享的c语言库       库
+
+tcl python perl ruby java
+
+c文件 为代码写接口文件 在接口文件上运行swig 自动生成部分c语言代码，包装代码
+c语言代码 + 包装代码 = 共享库
+回文蛋白质序列   c语言代码
+
+编译和使用 这一小段c代码
+
+接口文件  到处函数和变量
+
+
+http://www.swig.org/download.html
+
+1 head first java
+2 runoob java
+3 runoob c++
+
+4 python
+5 git
+6 shell
+
+
+
+命令行选项
+bzip2 -d XXX.tar.bz2
+tar xvf XXX.tar
+
+./configure
+make
+make install
+http://atmarkplant.com/install-swig-for-mac-os-x/
+
+The SWIG test-suite and examples are configured for the following languages:
+go java perl5 php5 python ruby tcl 
+
+
+
+2
+LD_LIBRARY_PATH=/usr/local/lib:/usr/lib
+export LD_LIBRARY_PATH
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
