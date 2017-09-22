@@ -1,0 +1,41 @@
+
+20170922
+jythonc命令把python类编译成java类  这样的java类能直接导入到java程序中
+
+
+
+
+http://www.jython.org/downloads.html
+jython下载地址  Jython2.7.0
+
+开发环境安装
+1 jython  2.7.0
+2 java    1.8.0.44
+
+
+
+/Users/tengyue/jython2.7.0
+
+Jython 和 java 类交互方面  普通的特性访问直接访问javabean属性
+
+所有属性可以通过构造函数中的关键字参数进行设置
+b = awt.Button()
+b.setEnable(false)
+b.enable=false
+
+b = awt.Button(enable=false) 
+多参数元组 函数参数 事件监听器
+
+java class path 
+
+最近苹果电脑安装环境
+1 java
+2 go
+3 jython
+
+17.3 编写c语言扩展
+
+扩展Python通常指扩展CPython 用c语言实现标准python版本
+提示！！
+
+c语言的动态性不及java 和 c#    .net
