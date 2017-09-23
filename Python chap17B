@@ -104,6 +104,108 @@ LD_LIBRARY_PATH=/usr/local/lib:/usr/lib
 export LD_LIBRARY_PATH
 
 
+/usr/include/python2.7
+
+
+https://www.zhihu.com/question/30941329
+
+
+export PYTHON_HOME=/System/Library/Frameworks/Python.framework/Versions/Current
+
+引用计数
+python内存自动管理
+c语言必须显示的释放不在使用的对象或者说内存块  内存泄露  不在需要他的时候会自动消失
+
+借用的引用 VS 自己的引用
+
+引用计数是垃圾收集的一种 垃圾是程序不在使用的对象  循环垃圾
+
+编写python c扩展
+
+
+static PyObject *somename(PyObject *self,PyObject *args){
+    PyObject *result;
+    
+    Py_INCREF(result);
+    return result;
+}
+
+函数的签名：
+int PyArg_ParseTuple(PyObject *args,char *format,...);
+格式字符串
+
+if(!PyArg_ParseTuple(args,"")){
+    return NULL:
+}
+
+格式字符串  Python/C API
+
+在扩展的模块中可以创建自己的內建类型和类
+
+Python文档
+
+c语言代码充当模块
+
+
+
+#include <Python.h>
+static Object *is_palindrmoe(PyObject *self, PyObject *args){
+    int i,n;
+    const char *text;
+    int result;
+    
+    if(!PyArg_ParseTuple(args,"s",&text)){
+        return NULL;
+    }
+
+    n=strlen(text);
+    result =1;
+    for(i =0;i<=n/2;++i){
+        if( text[i] != text[n-i-1])
+            result =0;
+            break;
+        }
+    }
+    
+    return Py_BUildValue("i",result);
+}
+
+static PyMethodDef PaqlindromeMethods[] = {
+    {"is_palindrom", is_palindrome, METH_VARARGS,"Detect palindromes"},
+    {NULL,NULL,0,NULL}
+};
+
+PyMODINT_FUNC initpalindrome(){
+    Py_InitModule("palindrome“，PalindromeMethods);
+}
+
+
+
+原型化
+SWIG是一个自动为c语言库生成包装代码的工具
+编写可以作为共享库直接导入Python的C语言代码
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
