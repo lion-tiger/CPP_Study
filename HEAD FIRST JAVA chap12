@@ -1,0 +1,23 @@
+GUI
+GUI VS COMMAND LINE
+图形接口
+服务器端的应用程序
+
+客户端的 用户接口是由web页面组成的
+写图形化的工具接口
+逃避不是个好办法 命令行差且没有适用性
+
+时间处理与内部类别等java语言的关键功能  制作按钮，回执屏幕画面， 显示jpeg图文件 做动画
+
+
+一切都从window开始
+JFrame代表屏幕上一个window对象
+将组件加到window上 widget Swing组件
+
+unmarkTextString
+
+
+
+如何让按钮在用户按下时执行特定的工作
+监听事件！！！！
+
