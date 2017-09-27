@@ -34,5 +34,58 @@ MIDI装置   synthesizer software synth
 该方法执行某些有风险的任务 可能会在运行期间出状况 必须认识到该方法是有风险的
 写出异常处理代码
 
+===============================
+
+java异常处理机制 简洁 轻量化的执行期间例外状况处理方式   处理错误状况的程序代码
+throws
+
+getSequencer（）可能会在执行器间出现问题 必须声明除调用它可能会有风险
 
 
+异常时一种Exception类型的对象
+Exception类型的对象可以是任何它的子类的实例
+
+try{
+
+}catch(Exception ex){
+
+}
+
+调用声明有异常的方法时 该方法把异常丢给你的  重点是哪个方法抛出异常，哪个方法抓住他
+
+public void takeRisk() throws BadException{
+    if(abandoAllHope){
+        throw new BadException();
+    }
+}
+
+
+public void crossFingers(){
+    try{
+        anObject.takeRisk();
+    } catch(badException ex){
+        ex.printStackTrace()
+    }
+}
+
+ducking
+
+finally
+
+重要的清理程序的代码
+方法可以抛出多个异常
+
+catch出现的先后顺序会有影响     只声明父类就可以
+
+异常时对象 是多态的
+子类对象可以赋值给父类的引用变量
+
+不要把大篮子放在小篮子上
+
+
+不想处理异常时，  just duck it
+
+处理或者声明异常
+
+
+MIDI数据   MIDI装置 将数据转化成声音
