@@ -1,0 +1,35 @@
+
+
+boost
+功能强大 构造精巧 跨平台 开源 免费 C++程序库
+boost程序库  历史 组成 基本使用方式
+linux搭建自己的开发环境
+
+1.1 boost
+1998  boost社区 可移植的高质量的C++源程序库
+提供参考实现
+C++11标准库有2/3来自boos库 
+准标准库 同行审查制度 很高的工业强度
+超过了大多数商业产品的实现
+STL 
+附带有丰富的说明文档
+
+GPS
+Apache
+
+boost1.57
+
+-- 获取方式
+-- 目录结构
+
+
+
+
+
+
+
+
+
+boost::asio::io_service io_service;
+BOOST_THROW_EXCEPTION(std::runtime_error("Unable to resolve "s + address + " with boost tcp resolver"));
+#include <boost/exception/diagnostic_information.hpp>
