@@ -3,6 +3,36 @@
 产生异常
 处理异常
 
-编写可能有异常的方法时 处理西昌情况的程序
+编写可能有异常的方法时 处理异常情况的程序
 
 Java Sound API创建一个MIDI音乐播放程序
+
+生效应用程序
+app  application program
+
+鼓声送给另外一个播放器
+
+没有商业价值的程序
+
+GUI部分
+
+点选别人送过来的信息以加载节拍组合
+
+
+创建Swing GUI
+网络连接其他的计算机
+数据送出到输入输出设备
+
+javasound API    MIDI如何对去和播放声音
+
+JavaSound API  一组类和接口  J2SE 的类函数库中  = MIDI + sampled
+
+不同电子发生装置沟通的标准协议   MIDI相当于乐谱  音效靠装置放出的
+MIDI装置   synthesizer software synth
+
+调用有风险的方法
+该方法执行某些有风险的任务 可能会在运行期间出状况 必须认识到该方法是有风险的
+写出异常处理代码
+
+
+
