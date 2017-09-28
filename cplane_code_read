@@ -69,6 +69,10 @@ sendMsg()
     cplaneCentral.fsHlApInterfaces.emplace(poolId, std::make_unique<core_network::ConcreteFsHLAPInterface>(*fsHlApGateway));
     
     
+    void CplaneCentral::OAMMessagesHandler::createFsHLAPInterface(types::NodeAddress nodeId, types::PoolId poolId)
+
+    
+    
     
     std::make_unique 智能指针
     
@@ -78,7 +82,10 @@ sendMsg()
     
     
     
-    
+    OAMMessagesHandler
+           ConcreteFsHLA
+           ConcreteL2HiConfig.cpp
+           
     
     
     
