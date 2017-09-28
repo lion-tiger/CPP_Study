@@ -16,5 +16,35 @@ B python protocol buffer
 C linking static library 
 
 
+=========================================
+cplane 
+cplane central
+cplane ue
+
+
+main_cpCentral.cpp
+main
+
+cplane::commonMain
+
+1 main_cpCentral.cpp
+    int main()
+2 cplane::commonMain();
+
+boost::program_options::variables_map        操作系统相关
+
+0 基础 看cplane代码
+c++  
+
+
+3 runCpCentral            CplaneCentralRunner.cpp
+
+4 run
+
+applications::CpCentralWithDependencies
+
+5 zmqReceiver.reveiveLoop();
+
+
 
 
