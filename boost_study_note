@@ -33,3 +33,54 @@ https://sourceforge.net/projects/boost/files/boost/
 boost::asio::io_service io_service;
 BOOST_THROW_EXCEPTION(std::runtime_error("Unable to resolve "s + address + " with boost tcp resolver"));
 #include <boost/exception/diagnostic_information.hpp>
+
+
+
+
+1 简介
+2 获取使用
+3 事例
+
+1.1.3 使用方式
+不需要编译连接 直接在源码里包含头文件即可
+#include <boost/logic/tribool.hpp>
+using namespace boost;
+把c++类的声明和实现放在了一个文件中
+
+少量库必须编译成静态库或者动态库 + 构建时指定 链接选项   有的库已经有了不需要编译的替代品
+
+
+
+1.2 开发环境
+操作系统和编译器   编译和安装boost库
+boost大量使用了C++高级特性
+Debian 4.9.2-10    gcc 4.9.2   linux 3.16.0-4-amd64
+
+快捷安装boost
+直接执行命令 ./bootstrap.sh;./b2 install
+编译前的配置工作， 编译并安装boost
+
+编译release版本的 库文件， 头文件/usr/local/inlcude库文件/usr/local/lib
+./b2 --buildtype=complete install  安装所有调试版，发行版的静态库 动态库
+
+使用g++ 编译  g++ -o a.out test.cpp -I../
+
+1.3 构建工具
+Linux C C++构建工具  make cmake scons
+boost自带的构建工具 b2  boost build v2
+
+构建脚本
+
+cd tools/build/
+./bootstrap.sh
+./b2 install
+b2默认被安装在/usr/local/bin/
+
+
+
+1.3.3 构建语言
+b2使用的构建语言是bjam 解释型语言  完整的语法定义 变量 分支 循环 函数 类  shell awk
+基于token的语言
+
+
+https://github.com/chronolaw/boost_guide
