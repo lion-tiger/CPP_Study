@@ -47,5 +47,27 @@ applications::CpCentralWithDependencies
 
     std::vector<std::function<void()>> callbacks;     key
     ZmqReceiver::registerReceiver
+    
+    
+6  folder corenetwork
+ConcreteFsHLAPInterface
+
+
+
+FsHLAPGateway.hpp
+FsHLAPInterface.hpp
+sendMsg()  --> gateway.send(msg)
+
+
+sendMsg()
+    ConcreteFsHLAPInteface.cpp
+    ConcreteL2HiCOnfig.cpp
+    ConCreteL2HiUser.cpp
+    ConcreteOAMInterface.cpp
+    ConcreteRRCInterface.cpp
+
+
+
+[16:12:24.248749][17240][17240][debug] ConcreteFsHLAPInterface sending messages::FsHLAP::CellSetupRequest
 
 
