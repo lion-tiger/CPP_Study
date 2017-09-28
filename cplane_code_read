@@ -73,6 +73,27 @@ sendMsg()
     std::make_unique 智能指针
     
     
+    operator()
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
 void CplaneCentral::OAMMessagesHandler::createFsHLAPInterface(types::NodeAddress nodeId, types::PoolId poolId)
 {
     std::uint32_t nodeIdSic = nodeId.value << 16;
