@@ -66,7 +66,29 @@ sendMsg()
     ConcreteOAMInterface.cpp
     ConcreteRRCInterface.cpp
 
-
+    cplaneCentral.fsHlApInterfaces.emplace(poolId, std::make_unique<core_network::ConcreteFsHLAPInterface>(*fsHlApGateway));
+    
+    
+    
+    std::make_unique 智能指针
+    
+    
+void CplaneCentral::OAMMessagesHandler::createFsHLAPInterface(types::NodeAddress nodeId, types::PoolId poolId)
+{
+    std::uint32_t nodeIdSic = nodeId.value << 16;
+    types::Sicad fsHLAPAddress{nodeIdSic + common::CPID_5G_L3_FSHLC_CPRT};
+    LOG_INFO_MSG(cplaneCentral.logger, "Creating FsHLAP interface to {} for Pool: {:#x}", fsHLAPAddress.value, poolId.value);
+    if(!cplaneCentral.fsHlApSyscomEndpoint)
+    {
+        endpoints::SocketAddress syscomProxyAddress = {cplaneCentral.sysComConfiguration.sysComGwIp, cplaneCentral.sysComConfiguration.sysComGwPortCprt.value};
+        auto localSicad = cplaneCentral.sysComConfiguration.FsHlAp;
+        cplaneCentral.fsHlApSyscomEndpoint = std::make_shared<endpoints::SyscomEndpoint<message_gateway::listeners::FsHLAPListener>>(
+            cplaneCentral.logger, cplaneCentral.fshlapDeserializer, std::move(syscomProxyAddress), localSicad);
+    }
+    auto fsHlApGateway = core_network::createFsHLAPGateway(cplaneCentral.fsHlApSyscomEndpoint, fsHLAPAddress);
+    cplaneCentral.fsHlApInterfaces.emplace(poolId, std::make_unique<core_network::ConcreteFsHLAPInterface>(*fsHlApGateway));
+    cplaneCentral.fsHlApGateways.emplace(poolId, std::move(fsHlApGateway));
+}
 
 [16:12:24.248749][17240][17240][debug] ConcreteFsHLAPInterface sending messages::FsHLAP::CellSetupRequest
 
