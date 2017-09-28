@@ -45,6 +45,7 @@ applications::CpCentralWithDependencies
 
 5 zmqReceiver.reveiveLoop();
 
-
+    std::vector<std::function<void()>> callbacks;     key
+    ZmqReceiver::registerReceiver
 
 
