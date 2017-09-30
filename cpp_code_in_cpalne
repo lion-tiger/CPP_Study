@@ -1,0 +1,55 @@
+运算符重载
+
+operator()
+
+模板
+函数模板
+类模板
+
+
+AsnFrame::operator FRAME_PTR&()
+opeartor=
+operator==
+
+operator<
+operator==
+operator<<
+
+ConcreteUE.hpp
+
+
+    AsnFrame(const AsnFrame&) = delete;
+    AsnFrame& operator=(const AsnFrame&) = delete;
+
+    ~AsnFrame();
+
+    operator FRAME_PTR&();
+    operator FRAME_PTR*();
+    
+    
+    bool operator<(const BearerIndex& a) const
+    {
+        return value < a.value;
+    };
+
+
+#include <boost/msm/front/euml/operator.hpp>
+
+
+http://blog.csdn.net/gw569453350game/article/details/47272833
+有限状态机
+
+boost::msm::front::Row
+
+
+    void operator()(CompletionStatus status)
+    {
+        stateMachine.process_event(Executed{status});
+    }
+
+
+
+void CplaneCentral::InternalMessagesHandler::operator()(const messages::internal::CleanUpUeContextResponse& message)
+{
+    cplaneCentral.handle(message);
+}
