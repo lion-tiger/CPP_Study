@@ -79,7 +79,9 @@ sendMsg()
     
     operator()
     
-    
+    operator*
+    operator++
+    operator==
     
     
     OAMMessagesHandler
@@ -119,5 +121,14 @@ void CplaneCentral::OAMMessagesHandler::createFsHLAPInterface(types::NodeAddress
 }
 
 [16:12:24.248749][17240][17240][debug] ConcreteFsHLAPInterface sending messages::FsHLAP::CellSetupRequest
+
+
+
+
+
+IOService::operator boost::asio::io_service&()
+{
+    return ioService;
+}
 
 
