@@ -57,3 +57,16 @@ paintComponent()  查询Graphics 这个类的的API
 java2D API这个
 java2D API类
 java2D API
+
+
+因为参数g是个graphics对象，代表可能是个其子类 因为多态
+
+
+框架代码！！ archi 
+
+获得事件 绘制图形
+
+
+GUI布局
+
+
