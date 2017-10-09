@@ -53,3 +53,10 @@ void CplaneCentral::InternalMessagesHandler::operator()(const messages::internal
 {
     cplaneCentral.handle(message);
 }
+
+
+
+void CplaneCentral::OAMMessagesHandler::operator()(const messages::OAM::NetworkPlanRequest& msg)
+{
+    LOG_INFO_MSG(cplaneCentral.logger, "Received Network Plan Request with {} manage objects inside", msg.moData.size());
+
