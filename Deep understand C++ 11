@@ -148,6 +148,30 @@ lambda 类似于局部函数 但不是
 C++11之前 程序员只能编写类来模拟局部函数
 常量性的例子 常量的值 由自己初始化状态决定
 
+lambda匿名函数中 按值传递是常量 按引用传递是变量
+
+lambda函数的类型 以及 该类型和函数指针的关系
+
+lambda的类型  并非 简单的函数指针类型或者自定义类型
+
+闭包的类   闭包类型的临时变量 右值
+
+
+
+mutable关键字  const
+
+lambda在c++11中默认 是一个const 函数
+
+一个const成员函数不能在函数体内改变非静态成员变量的值的
+lambda捕捉列表中的变量，都会成为等价仿函数的成员变量  常量成员函数
+
+
+一个最为常见的STL算法 for_each
+
+for_each(iterator begin,iterator end,Function fn)
+{
+    for (iterator i = begin;i!=end;i++) fn(*i);
+}
 
 
 
