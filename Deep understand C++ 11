@@ -175,6 +175,10 @@ for_each(iterator begin,iterator end,Function fn)
 
 
 
+g++ a.cpp -c -std=c++11
+比较函数指针和lambda方式   泛型编程
+
+
 
 
 
