@@ -1,0 +1,46 @@
+chap 13 运用swing             20171020
+
+布局管理器
+Swing 布局管理器 widget
+Swing的组件  所有的组件继承自 javax.swing.JComponent
+widget是swing的组件
+组件可以嵌套
+按钮或者列表等用户交互组件放在框架或者面板等北京组件上。
+
+可以向JPanel注册鼠标点选等事件
+
+Layout Manager  是个与特定组件关联的java对象
+框架 面板 按钮  大小与位置
+myPanel.add(myButton);
+每个背景组件都可以有自定义规则的布局管理器。
+
+不同的布局管理器有不同的组件安置策略
+
+像素 单位
+
+border  框架默认 
+flow    面板默认
+box
+
+JFrame必须连接到底层的操作系统，以便来存取显示装置。
+myFrame.setContentPane(myPanel)
+
+    pack() 方法会是window的大小符合内含组件的大小
+
+--操作swing组件
+text field
+text area     一行以上的文字   滚动条或者换行功能
+checkbox
+list
+
+JTextArea
+JCheckBox
+
+组件框架的间距  手动调整只对java虚拟机有好处。
+庆幸自己有机会不用自己写那么多 与真正商业逻辑无关的程序代码
+
+
+
+
+chap13 差最后一个case
+
