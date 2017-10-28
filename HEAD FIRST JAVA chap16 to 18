@@ -71,3 +71,55 @@ manifest.txt
 
 jar里没有源文件
 执行jar
+
+-执行jar
+java虚拟机能从jar中载入类 并调用该类的main方法
+
+java -jar A.jar
+根据操作系统如何动态设定 
+
+包类包进包中
+
+写出可重复使用的类时，放到内部的函数库 使用这些面向对象完美经典示例时  姓名相克
+让类包进包中，然后再把整个包jar起来
+程序无法编译或者执行
+JAVA API
+用包防止类名称的冲突  包不只是用来防止命名冲突
+
+
+面向对象的重点之一是写出可重用的组件 开发者必须能够组合各种来源的组件产生新的应用
+
+当你在处理包结构时要想到继承层次
+包可以防止名称冲突， 包名称不会重复
+域名
+-把类包进包中
+
+必须把类放在与包层次结构相以应的目录结构下
+
+每一个源文件只能有一个包指令
+
+编译与执行包
+
+编译器和java虚拟机 都要能找到你的类以及所用到的类传递
+
+以包创建可执行的jar
+
+ 1894  jar -cvmf manifest.txt A.jar *.class
+ 1895  A.jar
+ 1896  java A.jar 
+ 1897  java -jar A.jar 
+ 1966  jar -cvmf manifest.txt BBB.jar com
+ 1968  java -jar BBB.jar 
+ 1970  jar -cvmf manifest.txt BBB.jar com
+ 1971  java -jar BBB.jar 
+ 1978  cp eg3/class/BBB.jar eg4/
+ 1981  jar -tf BBB.jar 
+ 1983  jar -xf BBB.jar 
+
+=====================================================
+java web start  JWS
+你的应用程序可以在
+
+
+
+
