@@ -163,6 +163,63 @@ EJB+Jini = RMI
 
 远程过程调用的设计
 
+辅助设施 是个 实际上执行通信任务的对象
+客户端是真正服务的代理
+将调用的信息传递过去 比如方法的名称和参数内容 解析打包送过来的信息  socket串流
+
+调用方法 的过程
+
+java RMI提供客户端和服务器端的辅助设施对象
+RMI有执行期所需的全部的基础设施
+同一个java虚拟机上的方法调用一样的
+底层涉及到socket 和 串流  
+辅助设施对象所用的协议  JRMP IIOP
+RMI STUB  <--> RMI SKELETON
+
+-创建远程服务
+
+它是个作为服务的多态化类
+
+remote是个标志性的接口，意味着没有方法 extend 接口是可以继承其他的接口
+
+远程方法 的参数和返回值必须是primitive或serializable 任何远程方法的参数都会被打包通过网络传递 通过序列化
+
+数组和集合
+继承UnicastRemoteObject(java.rmi.server) 以让父类处理这些工作
+
+向RMI registry注册服务
+
+伴随着java software development kit 而来的rmic工具
+
+包目录结构和完整名称
+
+https://docs.oracle.com/javase/7/docs/technotes/tools/windows/rmic.html
+
+找出上面有相符名称的服务
+
+先java --》 class文件   rmic需要事先编出来的class文件！！！！
+
+客户端如何取得stub对象
+客户端必须取得stub对象 客户端要调用它的方法
+
+RMI会自动的解序列化stub 
+将stub类交给客户  动态类下载  http get URL 需要一个web服务器来提供此 类文件
+
+B2B商务网站  在J2EE的后端使用RMI
+EJB创建的旅馆订房系统使用RMI
+Jini功能
+
+
+-关于servlet
+servlet是放在http web服务器上面运行的java程序
+用户通过浏览器和网页 进行交互时 请求会发给网页服务器  Perl编写的cgi
+网页开发者使用cgi或者servlet来操作用户的提交
+
+servlet也可以使用rmi
+目前最常见的j2ee  混合了servlet和ejb  servlet是ejb的用户 此时 servlet是通过rmi与ejb通信的
+
+http服务器
+
 
 
 
