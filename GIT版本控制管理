@@ -20,3 +20,73 @@ git push
 
 
 12.1 版本库概念
+-
+裸版本库 
+开发版本库   当前分支
+
+clone 
+fetch
+push
+update
+
+发布的版本库应该是裸版本库
+-
+版本库克隆 通过文件系统或者网络地址  忽略远程追踪分支
+原始版本库 refs/heads/  --> refs/remote     本地开发分支--> 远程追踪分支
+
+3.2.8 git clone public_html my_website  ??
+
+克隆网站上的版本库副本 成为origin的远程版本库  单向关系  --origin 指定替代名
+
+fetch  ??
+-
+本地或者当前版本库local current <--> 远程版本库remote repository(可能是本地文件系统另一个版本库)
+上油版本库
+git使用远程版本库 远程追踪分支
+
+git remote
+./git/config git config
+git fetch
+git pull
+git push
+git ls-remote
+
+-
+术语变得更加标准
+不同分支的功能 不同的命名空间
+
+远程追踪分支 引入一个新的，单独的命名空间
+
+常规特性分支 追踪分支
+远程追踪分支是只读的
+如何恰当的管理追踪分支
+12.2
+-
+git支持多种形式的统一资源定位符 URL
+URL可以用来命名远程版本库
+Git URL
+
+数据通过网络 Git原生协议
+clone fetch
+-
+refspec
+引用
+通常引用是一个分支名 refspce 远程版本库中的分支名 映射到 本地版本库中的分支名
+
+开发分支      refs/heads/
+远程追踪分支   refs/remote/:wq
+
+git show-ref
+git ls-remote
+git fetch
+git pull
+git push
+
+git push -u origin master
+
+git push origin master
+git push origin master:refs/heads/master
+12.3
+使用远程版本库的示例
+位于互联网中不同的主机上
+
