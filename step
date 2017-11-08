@@ -9,3 +9,31 @@
 https://gerrit-documentation.storage.googleapis.com/Documentation/2.13.7/cmd-review.html
 
 https://cmake.org/cmake-tutorial/
+
+
+http://bbs.chinaunix.net/thread-3590256-1-1.html
+使用场景 开发一个日志系统
+把日志输出到控制台，还要写入日志文件
+
+NOTSET<DEBUG<INFO<WARNING<ERROR<CRITIAL
+
+logger.addHandler 
+雇佣handler帮忙处理日志
+handler主要有以下几种
+StreamHandler 输出到控制台
+FildHandler  输出到文件
+
+handler设置自己的level以及输出格式
+root logger 
+logger
+root logger自动创建 单实例的
+child loggerdd得到消息后 既把消息分给自己的handler 也传递给 祖先的handler处理
+
+1 创建一个logger
+2 创建handler
+3 创建fomatter 并设置handler的format
+4 给logger加handler
+5 正式use
+
+http://blog.csdn.net/chosen0ne/article/details/7319306
+python日志输出 logging模块
