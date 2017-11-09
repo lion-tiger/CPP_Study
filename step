@@ -37,3 +37,31 @@ child loggerdd得到消息后 既把消息分给自己的handler 也传递给 �
 
 http://blog.csdn.net/chosen0ne/article/details/7319306
 python日志输出 logging模块
+
+
+
+
+
+
+
+UML类图
+http://www.open-open.com/lib/view/open1328059700311.html
+UML类图几种关系总结
+泛化 Generalization      一般与特殊的关系 子类与父类的关系 子类三角箭头的实现指向父类
+实现 Realization         类与接口的关系  类是接口所有特征和行为的实现  三角箭头的虚线 箭头指向接口
+关联 Association         普通箭头的实现  指向被拥有者
+聚合 Aggregation         整体和部分的关系 强关联关系   空心菱形的实线 指向整体  部分可以独立存在      汽车 轮胎
+组合 Composition         整体和部分的关系 部分不能独立存在   实心菱形实现 指向整体            公司部门
+依赖 Dependency          使用关系 一个类实现需要另一个类的协助  
+                         局部变量 方法的参数 对静态方法的调用
+                         
+                         带箭头的虚线 指向被使用者
+ 泛化 = 实现 》组合 》 聚合 》 关联 》 依赖
+ 
+ StartUML
+ Netbeans UML Plugin
+ Acceleo
+ ArgoUML
+ BOUML
+ Eclipse UML2 Tools
+ 
