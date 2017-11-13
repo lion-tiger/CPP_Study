@@ -65,3 +65,66 @@ UML类图几种关系总结
  BOUML
  Eclipse UML2 Tools
  
+ 
+ 
+ 
+ 
+ http://blog.csdn.net/u011541946/article/details/70198676
+     1 import logging
+      2 import logging.handlers
+      3
+      4 LOG_FILE = 'sdt.log'
+      5 handler = logging.handlers.RotatingFileHandler(LOG_FILE, maxBytes = 1024*1024, backupCount = 5)
+      6 fmt = '%(asctime)s - %(filename)s:%(lineno)s - %(name)s - %(message)s'
+      7 formatter = logging.Formatter(fmt)
+      8 handler.setFormatter(formatter)
+      9 logger = logging.getLogger('sdt')
+     10 logger.addHandler(handler)
+     11 logger.setLevel(logging.DEBUG)
+     12
+     13 ch = logging.StreamHandler()
+     14 ch.setLevel(logging.DEBUG)
+     15 ch.setFormatter(formatter)
+     16 logger.addHandler(ch)
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+           1 import logging
+      2 import logging.handlers
+      3
+      4 LOG_FILE='sdt.log'
+      5
+      6 class SDTLog(object):
+      7     def __init__(self):
+      8         self.logger = logging.getLogger('sdt')
+      9         self.logger.setLevel(logging.DEBUG)
+     10         self.ch = logging.StreamHandler()
+     11         self.fmt = '%(asctime)s - %(filename)s:%(lineno)s - %(name)s - %(message)s'
+     12         self.formatter=logging.Formatter(self.fmt)
+     13         self.ch.setFormatter(self.formatter)
+     14         self.ch.setLevel(logging.DEBUG)
+     15         self.fh = logging.handlers.RotatingFileHandler(LOG_FILE, maxBytes = 1024*1024, backupCount = 5)
+     16         self.fh.setFormatter(self.formatter)
+     17         self.fh.setLevel(logging.DEBUG)
+     18         self.logger.addHandler(self.fh)
+     19         self.logger.addHandler(self.ch)
+     20
+     21
+     22 def info(a):
+     23     self.logger.info(a)
+
+
+ 
+ 
+ 
+ 
+ 
+ 
