@@ -1,0 +1,131 @@
+0 git教程
+分布式版本控制和源代码管理系统
+重点使用和管理代码的速度
+管理linux内盒开发
+GNU
+官网 https://git-scm.com/
+
+如何在分布式环境中使用git进行项目版本控制
+基于web和非基于web的应用程序开发中工作
+前提条件:
+java或者其他软件开发的项目
+
+workspace
+index/stage
+repository
+remote
+ 
+
+
+http://www.yiibai.com/git/
+1 git基础概念
+版本控制工具的一些背景知识
+如何在系统运行git
+设置git
+版本控制 一种记录 文件内容变化  可以对任何文件进行版本控制
+
+图形 网页设计师  图片 网页布局   vcs  version control system
+比较文件的变化细节  容易恢复
+本地版本控制系统 某种简单的数据库
+集中化的版本控制系统 有一个单一的集中管理的服务器
+RCS  --> SVN --> GIT
+CVS SVN Perforce
+分布式版本控制系统  使用本地仓库恢复   clone是对代码仓库的完整备份
+
+2 git历史
+git诞生于一个极富纷争大举创新的年代
+linux内盒开源项目
+内核维护工作 提交补丁 保存归档
+对非线性开发模式的强力支持 允许成千上万个并行开发的分支
+超大规模项目
+2005~now
+
+3 git基础和原理
+理解git的思想和基本原理
+知其所以然 游刃有余
+
+
+-直接记录快照， 而非差异比较
+git对待数据的方法  不是以文件变更表的方式存储信息
+初始文件 + 差异
+git把数据看做是小型文件系统的一组快照
+制作一个快照 并 保存这个快照的索引
+git对待数据更像一个快照流
+-近乎所有的操作都是在本地执行
+git diff 差异计算
+VPN?
+
+-git保证完整性git用以计算校验和的机制叫做sha 散列 hash 哈西
+40 字符串
+
+文件内容的哈希值来索引 而不是文件名
+-git一般只添加数据
+
+定期推送数据库到其他仓库
+
+尽情的各种尝试
+更深度探讨git如何保存数据及恢复数据的话题，撤销操作
+三种状态
+已提交 committed   git 仓库 
+已修改 modified    工作目录
+已暂存 staged      暂存区域  索引 index
+
+git仓库
+
+4 git安装设置
+软件包 安装程序安装 或者下载源码编译安装
+Fedora yum install git
+Debian apt-get install git
+
+源码安装 ??????????
+
+5 git 使用前配置
+安装了git之后 配置定义git环境
+只需配置一次
+git config 
+
+/etc/gitconifg    --system
+~/.gitconfig      --global
+.git/config       
+设置邮件名和邮件地址
+
+git config --global user.name "xie"
+git config --global user.email ""
+
+git help config
+irc.freenode.net
+
+6 git快速入门
+各种基本命令
+配置并初始化一个仓库
+开始或停止跟踪一个文件
+暂存
+提交  
+
+不同提交间的差异
+远程仓库推送
+拉取
+
+远程仓库
+git的目标是管理一个工程
+一些文件的集合
+跟踪他们的变化
+commit objects + 指针
+.git/
+
+1 创建git仓库
+自己搭建git服务器 VS 使用第三方托管平台
+
+http://git.oschina.net
+
+
+
+
+
+
+
+
+
+
+
+
