@@ -18,6 +18,7 @@ remote
 
 
 http://www.yiibai.com/git/
+=========================================
 1 git基础概念
 版本控制工具的一些背景知识
 如何在系统运行git
@@ -31,7 +32,7 @@ http://www.yiibai.com/git/
 RCS  --> SVN --> GIT
 CVS SVN Perforce
 分布式版本控制系统  使用本地仓库恢复   clone是对代码仓库的完整备份
-
+==========================================
 2 git历史
 git诞生于一个极富纷争大举创新的年代
 linux内盒开源项目
@@ -39,7 +40,7 @@ linux内盒开源项目
 对非线性开发模式的强力支持 允许成千上万个并行开发的分支
 超大规模项目
 2005~now
-
+============================================
 3 git基础和原理
 理解git的思想和基本原理
 知其所以然 游刃有余
@@ -71,14 +72,14 @@ VPN?
 已暂存 staged      暂存区域  索引 index
 
 git仓库
-
+====================================================
 4 git安装设置
 软件包 安装程序安装 或者下载源码编译安装
 Fedora yum install git
 Debian apt-get install git
 
 源码安装 ??????????
-
+======================================================
 5 git 使用前配置
 安装了git之后 配置定义git环境
 只需配置一次
@@ -94,7 +95,7 @@ git config --global user.email ""
 
 git help config
 irc.freenode.net
-
+=======================================================
 6 git快速入门
 各种基本命令
 配置并初始化一个仓库
@@ -113,10 +114,31 @@ git的目标是管理一个工程
 commit objects + 指针
 .git/
 
-1 创建git仓库
+ 创建git仓库
 自己搭建git服务器 VS 使用第三方托管平台
 
 http://git.oschina.net
+-获取git仓库
+a git clone url
+
+git bash
+git支持多种传输协议 http:// 
+                 git://
+                 ssh
+                 
+                 git init 
+                 git add 
+                 git commit
+                 
+ 已跟踪和未跟踪
+ 
+ 已跟踪：未修改 已修改 已暂存 已提交
+ git status -s 
+ git status --short
+ git add 
+ git commit
+ 自动生成的文档 存档
+ 
 
 
 
