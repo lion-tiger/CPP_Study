@@ -162,7 +162,147 @@ git push origin master
 git remote show
 git remote show origin
 
- 
+
+
+
+
+
+======================================================
+======================================================
+chap7 git工作流程
+http://www.yiibai.com/git/git_life_cycle.html
+git生命周期
+每个操作的git命令
+======================================================
+chap8 git创建存储库
+如何创建一个远程git仓库
+需要一个远程git仓库来执行团队协作。
+软件项目的托管平台 github 创建并初始化一个新的存储库
+======================================================
+chap9 git克隆操作
+演示如何使用git clone命令
+git bash
+git命令行工具界面
+======================================================
+chap10 git执行变更操作
+添加文件 修改和提交
+git基本的文件修改和版本管理
+代码通过编译测试 一切正常
+git status -s
+??
+git add  命令将文件添加到暂存区
+git commit main.py -m ""
+
+git commit -a -m
+=======================================================
+chap11 git查看更改
+对比提交结果
+git log
+git show
+git status
+git diff             opendiff kompare emerge vimdiff
+=======================================================
+chap12 git提交更改
+git存储库的文件和提交文件记录
+git commit --amend
+=======================================================
+chap13 git推送 push 操作
+与其他开发人员协同开发工作
+每个开发人员都可以提交自己贡献的代码 让其他人看到并修改
+协同多人一起工作
+将代码文件最后一个确定版本提交 然后推送变更
+push 操作将数据永久存储到git仓库
+成功的
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+chap10 git config 命令
+此命令用于获取并设置存储库或者全局选项
+这些变量控制git的外观和操作的各个方面
+
+查询 设置 替换 取消 设置选项
+
+1 配置文件的存储位置
+/etc/gitconfig --system
+~/.gitconfig   --global
+.git/config
+
+2 配置用户名和密码
+git config --global user.name "xie"
+git config --global user.email ""
+3 配置编辑器
+git config --global core.editor emacs
+
+4 配置比较工具
+缺省的比较工具 解决合并时的冲突
+vimdiff
+git config --global merge.tool vimdiff
+kdiff3 tkdiff meld xxdiff emerge vimdiff gvimdiff ecmerge opendiff 作为有效的合并工具
+也可是设置一个客户端的工具
+5
+git config --list
+添加 删除配置项
+--add
+
+git config --add site.name yibai
+
+
+/etc/gitconfig
+~/.gitconifg
+使用最后面的值
+
+tengyuedeMac-mini:yibai_example tengyue$ git config --list
+user.name=Xie Guoyong
+user.email=735332492@qq.com
+core.repositoryformatversion=0
+core.filemode=true
+core.bare=false
+core.logallrefupdates=true
+core.ignorecase=true
+core.precomposeunicode=true
+remote.origin.url=https://github.com/lion-tiger/yibai_example.git
+remote.origin.fetch=+refs/heads/*:refs/remotes/origin/*
+branch.master.remote=origin
+branch.master.merge=refs/heads/master
+
+
+
+6
+git help config
+git config --help
+man git-config
+
+
+
+
+
+
+
 
 
 
