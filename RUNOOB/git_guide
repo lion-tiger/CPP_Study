@@ -139,6 +139,30 @@ git支持多种传输协议 http://
  git commit
  自动生成的文档 存档
  
+ 
+6 远程仓库的使用
+git项目上多人合作
+好几个远程仓库
+推送 拉取数据
+管理不同的远程分支
+
+6.1 查看远程仓库
+如果已经配置远程仓库服务器 git remote 
+origin git给你克隆的仓库服务器的默认名字
+git remote
+git remote -v
+git remote add <shortnaem> <url>
+
+git fetch gs
+
+git pull
+git push
+git push -u origin master
+git push origin master
+git remote show
+git remote show origin
+
+ 
 
 
 
