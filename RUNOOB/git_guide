@@ -219,6 +219,15 @@ git push origin master
 
 =========================================================
 chap14 git更新操作
+git add
+git commit
+git push
+git pull
+git fetch
+=========================================================
+chap15  git吟唱操作
+git stash
+
 
 
 
