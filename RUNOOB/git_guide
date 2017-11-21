@@ -214,6 +214,12 @@ chap13 git推送 push 操作
 push 操作将数据永久存储到git仓库
 成功的
 
+git show
+git push origin master
+
+=========================================================
+chap14 git更新操作
+
 
 
 
