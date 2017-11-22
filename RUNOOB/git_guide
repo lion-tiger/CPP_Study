@@ -225,8 +225,53 @@ git push
 git pull
 git fetch
 =========================================================
-chap15  git吟唱操作
+chap15  git隐藏操作
 git stash
+git stash pop
+git stash list
+=========================================================
+chap16 git移动操作
+git mv
+git add
+git push
+git pull
+=========================================================
+chap17 git重命名操作
+git mv a b
+git status -s
+git commit -a -m "xxx"
+git push origin master
+========================================================
+chap18 git删除操作
+git rm
+git commit -a -am
+git push origin master
+========================================================
+chap19 git修正错误
+撤销对本地存储库所做的修改
+恢复未提交的修改
+git checkout  命令 还原文件的内容
+
+git checkout 命令 提供一个附加参数 HEAD指针，
+附加的提交指针参数指示git checkout命令重置工作树，并删除分段修改
+
+??????
+=========================================================
+chap20 git标签操作
+标签操作允许为存储库中特定版本提供有意义的名称
+标记项目代码 以便以后更容易访问这些代码
+git tag -a -m
+git pushi origin tag Release_1_0
+
+git pull
+git tag -l
+git show tagname
+
+git tag -d tagname
+git push origin :tagname
+
+
+
 
 
 
