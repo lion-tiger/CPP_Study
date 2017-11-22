@@ -1,0 +1,13 @@
+
+
+https://www.cnblogs.com/fnlingnzb-learner/p/5833051.html
+
+http://www.cplusplus.com/reference/map/map/
+
+
+C++中的STL中map用法详解
+Map是STL的一个关联容器
+一对一  关键字=关键字的值
+处理一对一数据的时候 在编程上提供快速通道
+map内部自建一颗红黑树 非严格意义上的平衡二叉树 这颗树具有对数据自动排序的功能
+map内部所有的数据都是有序的
