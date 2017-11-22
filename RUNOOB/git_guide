@@ -269,6 +269,33 @@ git show tagname
 
 git tag -d tagname
 git push origin :tagname
+=========================================================
+chap21 git补丁操作
+补丁是一个文本文件
+patch
+补丁
+有关于提交的元数据
+从提交创建一个补丁，其他人将补丁应用到他们的存储库
+git format-patch 创建最新的修补程序
+
+git add 
+git commit
+git format-patch -1
+git am
+git apply
+========================================================
+chap22 git管理分支
+分支操作允许 将开发过程分为两个不同的方向
+新特性开发与错误修复分开
+git branch name
+git checkout name
+git checkout -b
+git branch -D    删除现有分支之前 先切换到其他分支
+删除分支
+重命名分支
+
+合并分支
+git push origin new_branch
 
 
 
