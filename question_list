@@ -11,3 +11,12 @@ deb http://http.debian.net/debian jessie-backports main
 export $http_proxy=http://10.144.1.10:8080
 
 apt-get install docker.io
+==========================================
+如何使用df和du查看linux系统磁盘容量信息
+df -k
+df -m
+df --help
+
+du -k /home/
+du -ck
+du --help
