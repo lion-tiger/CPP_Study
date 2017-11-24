@@ -1,0 +1,13 @@
+2017-11-24 
+binji
+debian 安装docker
+
+vi /etc/apt/soure.list 
+vi /etc/apt/sources.list
+
+export $http_proxy=10.144.1.10:8080
+deb http://http.debian.net/debian jessie-backports main
+
+export $http_proxy=http://10.144.1.10:8080
+
+apt-get install docker.io
