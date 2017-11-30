@@ -20,3 +20,5 @@ df --help
 du -k /home/
 du -ck
 du --help
+
+add test
