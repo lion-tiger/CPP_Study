@@ -1,0 +1,65 @@
+
+http://blog.csdn.net/bitsjx/article/details/7454805
+
+
+
+[root@euca-10-254-84-163 study]# find / -name libcom_err.so.2
+/usr/lib64/libcom_err.so.2
+[root@euca-10-254-84-163 study]# find / -name libcrypto.so.10
+/usr/lib64/libcrypto.so.10
+[root@euca-10-254-84-163 study]# find / -name libcrypt.so.1
+/usr/lib/libcrypt.so.1
+/usr/lib64/libcrypt.so.1
+[root@euca-10-254-84-163 study]# find / -name libc.so.6
+/usr/lib/i686/nosegneg/libc.so.6
+/usr/lib/libc.so.6
+/usr/lib64/libc.so.6
+[root@euca-10-254-84-163 study]# find / -name libdl.so.2
+/usr/lib/libdl.so.2
+/usr/lib64/libdl.so.2
+[root@euca-10-254-84-163 study]#
+
+在一篇“elf文件格式与动态链接库”的博客里我们可以找到答案。
+a.out  elf符号表 所有的符号 程序的入口点 变量地址
+符号表可以用strip工具去除 这个文件无法让debug程序跟踪 但会生成比较小的可执行文件
+a.out文件中的符号表可以被完全去除
+
+strip永远不可能完全去除elf的符号表，elf加载运行时需要符号表
+
+
+strip命令不是完全安全的，对未连接的目标文件 去除符号表的话 会导致连接器无法连接
+eg
+gcc -c hello.c 
+strip hello.o
+gcc hello.o /usr/lib/crt1.o /usr/lib/crti.o /usr/lib/crtn.o -o hello
+
+
+http://iteedu.com/embed/embedarticles/problem/dynamicstripsysv.php
+stripped             将程序中的符号表剔除了，编出来的可执行文件体积比较小
+not stripped         保留了符号表信息，便于调试
+
+dynamically linked
+库的概念和应用
+库 类似的功能封装在一个单元集中，模块化编程
+静态库编译时加进去
+动态库运行时才被加载
+
+动态连接 动态加载
+
+需要多个库的程序来说，共享库可以减少程序的内存占用 磁盘和运行时内存
+多个程序可以同时使用一个共享库
+
+支持插件的应用程序所共同使用的模式
+
+深入探讨 linux中使用动态链接共享库的过程
+
+readelf -l dl  内核加载elf影响到用户空间的虚拟内存
+
+执行必要的再定位
+
+linux会为给定的程序自动装在和连接库  可执行库
+完整的动态加载的api
+
+systemV 启动机制
+sysV VS BSD  区别在于启动过程运行等级 机制
+
