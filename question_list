@@ -22,3 +22,28 @@ du -ck
 du --help
 
 add test
+
+================================================
+1 virt-manager 找不到
+
+root@euca-10-254-69-95:~# virt-manager
+Traceback (most recent call last):
+  File "/usr/share/virt-manager/virt-manager", line 30, in <module>
+    from gi.repository import GObject
+ImportError: No module named repository
+root@euca-10-254-69-95:~#
+
+解决方法
+find / -name *_gi*.so
+
+
+root@euca-10-254-69-95:~# find / -name *_gi*.so
+/usr/lib/python2.7/dist-packages_bak/gi/_gi_cairo.x86_64-linux-gnu.so
+/usr/lib/python2.7/dist-packages_bak/gi/_gi.x86_64-linux-gnu.so
+/usr/lib/python3/dist-packages/gi/_gi.cpython-35m-x86_64-linux-gnu.so
+
+参考 
+http://blog.csdn.net/xxxlinttp/article/details/78056467
+
+
+
