@@ -145,16 +145,79 @@ std::thread 类的定义
 
 
 新的统一化初始化方法！！
+=======================================
+201180122
+线程 通过 构造 std::thread对象 该对象指定了线程上要运行的任务
+任务 就是一个函数 void task()
+该任务是一个  接受额外参数的函数对象
 
 
+一系列由某种消息机制指定的互相独立的操作。
+
+C++线程库开始一个线程 == 构造一个std::thread 对象
+
+g++ thread1.cpp -pthread -std=c++11
+
+void do_somework();
+std::thread t(do_somework);
 
 
+可调用类型
+  函数
+  重载（）  带有函数调用操作符的类的实例
+  lambda函数
+
+给线程构造函数传递一个函数对象
+临时的且未命名的变量
+
+新的统一初始化语法
+
+  可调用对象
+===========================================
+class background_task{
+public:
+    void operator()() const{
+        do_something();
+        do_something_else();
+    }
+};
 
 
+std::thread my_thread(background_task());
+std::thread my_thread((background_task()));
+std::thread my_thread{background_task()};
 
 
+C++11 新功能
+std::thread my_thread( []{
+    do_something();
+    do_something_else();
+ } );
+ 
+显示等待完成 结合它
+自行运行     分离它
+
+对象销毁之前决定。    对象和线程 2回事
+
+必须确保线程访问的数据是有效的。
+
+线程函数自包含  将数据拷贝到该线程中，而不是数据共享  警告包含有指针或者引用的对象  线程在函数退出前完成？
+
+结合线程确保 函数退出前，该线程执行完毕。
 
 
+2.1.2 等待线程完成
+.join()
+
+条件变量 future  替代机制
+
+调用join的行为也会清理所有与该线程相关联的存储器
+
+
+2.1.3 异常环境下的等待
+确保访问局部状态的线程 在函数退出前结束       局部变量的引用
+
+标准的资源获取即初始化 RAII  提供一个类 在析构函数里调用join()
 
 
 
