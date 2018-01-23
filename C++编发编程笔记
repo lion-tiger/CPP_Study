@@ -288,6 +288,7 @@ std::thread::hardware_currency()
 
 线程间分隔任务
 
+从线程中返回结果的替代方法 future
 
 
 2.5 标识线程
