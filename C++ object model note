@@ -1,4 +1,68 @@
+chapter 1
+about object
+c语言中   数据   和对数据的操作   （函数）  程序性的 面向过程
+一组 分布在各个以功能为导向的函数中 的算法所驱动 处理的是共同的外部数据
 
+C++中  独立的抽象数据类型 ADT 来实现
 
 
 1.1 c++ object model   20180607
+
+类数据成员  成员变量有两种  静态非静态
+类成员函数  三种    静态 非静态 虚
+
+
+---- 简单对象模型
+
+c++编译器 设计复杂度  空间 执行期效率
+slots
+---- 表格驱动对象模型
+member function talbe
+---- c++对象模型
+
+内存空间和存取时间进行优化
+virtual table
+vtbl vptr
+
+
+1 nonstatic constructor function
+2 virtual deconstructor function
+3 nonstatic membuer function
+4 static member function
+5 virtual member function
+6 nonstatic member variable
+7 static member variable
+
+
+6          25
+ 
+7   4      13
+
+继承   
+单一继承
+多继承
+
+class iostream: public istream,public ostream{
+
+};
+虚拟继承
+class istream: virtual public ios{...};
+class ostream: virtual public ios{...};
+
+13357158917 钱伟
+
+c++2.0 virtual base class
+ chapter 3.4  ？？？
+---- 对象模型如何影响程序
+a.add(b); <==> add(a,b);
+
+type_info object RTTI
+
+
+1.2 关键词所带来的差异
+
+
+
+虚函数 虚基类 虚继承
+
+虚析构函数
