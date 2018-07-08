@@ -93,5 +93,14 @@ default constructor    在需要的时候被编译器构造出来
 ---- 带有default constructor 的member class object
 
 
+被程序员需要 VS 被编译器需要
+Bar::foo 编译器初始化
+Bar::str 程序员初始化
+
+被合成的默认构造函数只满足编译器的需要 而不是程序的需要！！
+
+附加 compiler code   VS explicit user code
+扩展用户写的构造函数  增加成员object的默认构造函数调用！
+
 
 
