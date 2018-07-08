@@ -104,7 +104,13 @@ Bar::str 程序员初始化
 
 
 
-2.2 
+2.2 Copy Constructor的构造操作
+3种情况 调用拷贝构造函数
+
+extern 
+static
+
+显式的定义拷贝构造函数
 
 
 
