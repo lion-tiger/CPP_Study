@@ -69,5 +69,29 @@ type_info object RTTI
 
 1.3 对象的差异
 
+====================
+20180708
+chap2 构造函数语意学
+
+implicit
+explicit
+trivial
+nontrival
+memberwise
+bitwise
+semantics
+
+
+conversion运算符
+变量测试
+expicit  制止的那一参数的构造函数被当做一个conversion运算符
+
+2.1 默认构造函数的构造操作
+default constructor    在需要的时候被编译器构造出来
+
+
+---- 带有default constructor 的member class object
+
+
 
 
