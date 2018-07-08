@@ -112,5 +112,22 @@ static
 
 显式的定义拷贝构造函数
 
+default construct and copy construct 在必要的时候才由显示器产生出来!!!!
+
+copy constructor VS copy assignment operator!!!!
+
+隐式声明或者隐式定义
+
+
+---- Bitwise Copy Semantics位逐次拷贝
+
+没有显式定义copy constructor的情况下，编译器是否自动生成一个copy constructor??
+
+在合成的copy constructor中, 整数 指针 nonclass member也都会被复制
+
+
+---- 重新设定virtual table指针
+
+
 
 
