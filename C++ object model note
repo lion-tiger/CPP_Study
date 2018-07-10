@@ -128,6 +128,23 @@ copy constructor VS copy assignment operator!!!!
 
 ---- 重新设定virtual table指针
 
+编译器导入一个vptr到一个class中后，该class就不再展现bitwise semantis 编译器需要合成一个copy constructor
+以求将vptr正确的初始化
+
+"bitwise copy semantics"
+
+---- 处理 Virtual Base Class Subobject
+虚函数      虚析构函数
+虚拟继承    虚基类
+
+编译器产生的代码  A 子类调用父类的默认构造函数 B 初始化vptr C 定位出子类中的父类成员
+
+2.3 程序转化语意学
+
+
+
+
+
 
 
 
