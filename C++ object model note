@@ -141,6 +141,42 @@ copy constructor VS copy assignment operator!!!!
 
 2.3 程序转化语意学
 
+----  显示的初始化操作
+
+在严谨的C++用词中 定义是指占用内存的行为
+x1.X::X(x0)
+
+---- 参数的初始化
+X xx=arg
+
+编译器实现技术上，有一种策略是导入所谓的临时性object 并调用copy constructor将它初始化
+
+
+
+---- 返回值的初始化
+(bar(__temp0),__temp0).memfunc();
+
+---- 在使用者层面做优化
+---- 在编译器层面做优化
+这个copy constructor的出现激活了C++编译器中的NRV优化
+printlocaltime()   C Runtime library
+
+static extern objects拷贝构造操作上
+
+---- Copy Constructor: 要还是不要
+explicit copy constructor!
+
+使用C++ library的memcpy()会更有效率
+
+不含任何由编译器产生的内部members  vptr 
+
+vptr必须在使用者的代码执行之前先设定妥当
+
+
+
+
+
+
 
 
 
