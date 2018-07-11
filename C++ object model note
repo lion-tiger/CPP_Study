@@ -173,6 +173,27 @@ explicit copy constructor!
 vptr必须在使用者的代码执行之前先设定妥当
 
 
+2.4 成员的初始化队伍
+
+构造函数初始化类成员变量
+initialization list 
+
+成员初始化列表  member initialization list
+
+assign 运算符
+
+string的默认构造函数  产生一个临时对象并初始化  赋值运算符 销毁临时对象
+一个明显更有效率的实现方法
+
+成员初始化列表   String is different from int.
+
+编译器会一一操作initialization list 以适当的顺序在constructor之内安插初始化操作
+
+在任何explicit user code 之前 
+
+list中的项目是有class member声明顺序决定的
+
+
 
 
 
