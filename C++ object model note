@@ -195,6 +195,17 @@ list中的项目是有class member声明顺序决定的
 
 
 
+20180712
+存在于constructor体内的member，不要使用存在于member initialization list 中的member
+
+子类的成员函数被调用，其返回值被当做基类的构造函数的参数
+
+基类和虚基类的 成员初始化列表详细说明
+
+！！！！ 编译器会对initialization list一一处理并重新排序，按照声明顺序。 
+安插代码到constructor中 并置于任何explicit user code之前
+
+
 
 
 
