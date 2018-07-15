@@ -1,0 +1,17 @@
+mac 安装brew
+
+https://www.cnblogs.com/zoulifeng2017/p/7514139.html
+/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)" 
+
+
+3_1
+Data Member 绑定
+早期C++两种防御性程序设计风格
+
+3_2 Data Member 布局
+
+静态数据成员存放在程序的data segment中，和个别的class object无关
+
+还有虚函数的类就有一个vptr
+
+编译器会合成一些内部使用的data members 以支持整个对象模型
