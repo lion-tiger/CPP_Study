@@ -1,0 +1,66 @@
+chap12
+1 本地版本库
+
+git分布式特性
+共享版本库与其他人协作
+一个clone
+分离的版本库
+正常分支 合并机制
+
+版本库关联
+远程版本库
+
+远程版本库remote是一个引用或者句柄 通过文件系统或者网络
+远程版本库简称 替代git url
+
+本地与远程版本库 交换数据
+原始版本库 clone版本库
+设置两个版本库双向数据交换
+
+远程追踪分支
+本地追踪分支
+
+发布版本库
+
+12.1
+bare respo VS develop respo
+develop respo 保存当前分支的概念 检出
+
+裸版本库没有工作目录
+
+裸版本库不能提交
+
+clone fetch push 
+
+git clone --bare
+
+git 开发版本库中可以使用引用日志 reflog 对引用的修改记录？？
+
+裸版本库中不能创建远程版本库
+git clone
+git忽略远程追踪分支
+public_html 原始的远程版本库
+克隆版本库 my_website
+
+origin 远程版本库
+--origin 指定替代名 origin
+
+origin/master
+origin/dev
+git remote命令
+git config
+git fethc
+git pull
+git push
+git ls-remote
+命名空间
+refs/head/dev
+refs/remotes
+origin/master refs/remotes/origin/master
+
+
+12.2引用其他版本库
+remote = url + refspec
+url指定访问的协议和数据的位置或者地址
+Git URL
+网络文件系统过载到本地的虚拟文件系统
