@@ -63,4 +63,8 @@ origin/master refs/remotes/origin/master
 remote = url + refspec
 url指定访问的协议和数据的位置或者地址
 Git URL
-网络文件系统过载到本地的虚拟文件系统
+网络文件系统挂载到本地的虚拟文件系统
+
+12.3 20180723
+question  本来该git commit 新的提交  结果git commit -amend 了 怎么恢复
+question --bare -bare
